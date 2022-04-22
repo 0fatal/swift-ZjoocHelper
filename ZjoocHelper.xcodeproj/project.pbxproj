@@ -7,19 +7,30 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		573DE28F28123160009917F9 /* WorkingItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 573DE28E28123160009917F9 /* WorkingItem.swift */; };
+		5792189E2810DCAD001787B3 /* MenuBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5792189D2810DCAD001787B3 /* MenuBarView.swift */; };
+		579218A12810E70E001787B3 /* ZjoocVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 579218A02810E70E001787B3 /* ZjoocVM.swift */; };
+		579218A32810E9C9001787B3 /* MenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 579218A22810E9C9001787B3 /* MenuView.swift */; };
 		57C63AEA2810490D00F7B113 /* ZjoocHelperApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57C63AE92810490D00F7B113 /* ZjoocHelperApp.swift */; };
 		57C63AEC2810490D00F7B113 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57C63AEB2810490D00F7B113 /* ContentView.swift */; };
 		57C63AEE2810490F00F7B113 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 57C63AED2810490F00F7B113 /* Assets.xcassets */; };
 		57C63AF12810490F00F7B113 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 57C63AF02810490F00F7B113 /* Preview Assets.xcassets */; };
+		57C63AF92810494300F7B113 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57C63AF82810494200F7B113 /* AppDelegate.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		573DE28E28123160009917F9 /* WorkingItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkingItem.swift; sourceTree = "<group>"; };
+		5792189D2810DCAD001787B3 /* MenuBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuBarView.swift; sourceTree = "<group>"; };
+		5792189F2810E2D7001787B3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		579218A02810E70E001787B3 /* ZjoocVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZjoocVM.swift; sourceTree = "<group>"; };
+		579218A22810E9C9001787B3 /* MenuView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuView.swift; sourceTree = "<group>"; };
 		57C63AE62810490D00F7B113 /* ZjoocHelper.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ZjoocHelper.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		57C63AE92810490D00F7B113 /* ZjoocHelperApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZjoocHelperApp.swift; sourceTree = "<group>"; };
 		57C63AEB2810490D00F7B113 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		57C63AED2810490F00F7B113 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		57C63AF02810490F00F7B113 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		57C63AF22810490F00F7B113 /* ZjoocHelper.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = ZjoocHelper.entitlements; sourceTree = "<group>"; };
+		57C63AF82810494200F7B113 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -33,6 +44,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		573DE28D2812312B009917F9 /* models */ = {
+			isa = PBXGroup;
+			children = (
+				573DE28E28123160009917F9 /* WorkingItem.swift */,
+			);
+			path = models;
+			sourceTree = "<group>";
+		};
 		57C63ADD2810490D00F7B113 = {
 			isa = PBXGroup;
 			children = (
@@ -52,11 +71,17 @@
 		57C63AE82810490D00F7B113 /* ZjoocHelper */ = {
 			isa = PBXGroup;
 			children = (
+				573DE28D2812312B009917F9 /* models */,
+				5792189F2810E2D7001787B3 /* Info.plist */,
+				5792189D2810DCAD001787B3 /* MenuBarView.swift */,
 				57C63AE92810490D00F7B113 /* ZjoocHelperApp.swift */,
 				57C63AEB2810490D00F7B113 /* ContentView.swift */,
 				57C63AED2810490F00F7B113 /* Assets.xcassets */,
 				57C63AF22810490F00F7B113 /* ZjoocHelper.entitlements */,
 				57C63AEF2810490F00F7B113 /* Preview Content */,
+				57C63AF82810494200F7B113 /* AppDelegate.swift */,
+				579218A02810E70E001787B3 /* ZjoocVM.swift */,
+				579218A22810E9C9001787B3 /* MenuView.swift */,
 			);
 			path = ZjoocHelper;
 			sourceTree = "<group>";
@@ -139,8 +164,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				57C63AF92810494300F7B113 /* AppDelegate.swift in Sources */,
+				579218A32810E9C9001787B3 /* MenuView.swift in Sources */,
+				5792189E2810DCAD001787B3 /* MenuBarView.swift in Sources */,
 				57C63AEC2810490D00F7B113 /* ContentView.swift in Sources */,
+				573DE28F28123160009917F9 /* WorkingItem.swift in Sources */,
 				57C63AEA2810490D00F7B113 /* ZjoocHelperApp.swift in Sources */,
+				579218A12810E70E001787B3 /* ZjoocVM.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -276,11 +306,13 @@
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = ZjoocHelper/Info.plist;
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
+				MACOSX_DEPLOYMENT_TARGET = 12.1;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.0nefatal.idea.ZjoocHelper;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -303,11 +335,13 @@
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = ZjoocHelper/Info.plist;
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
+				MACOSX_DEPLOYMENT_TARGET = 12.1;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.0nefatal.idea.ZjoocHelper;
 				PRODUCT_NAME = "$(TARGET_NAME)";
