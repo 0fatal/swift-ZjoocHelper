@@ -8,6 +8,12 @@
 
 /* Begin PBXBuildFile section */
 		573DE28F28123160009917F9 /* WorkingItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 573DE28E28123160009917F9 /* WorkingItem.swift */; };
+		573DE2912812CA25009917F9 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 573DE2902812CA25009917F9 /* SettingsView.swift */; };
+		573DE2942812CBFC009917F9 /* LaunchAtLogin in Frameworks */ = {isa = PBXBuildFile; productRef = 573DE2932812CBFC009917F9 /* LaunchAtLogin */; };
+		573DE2962812CD75009917F9 /* extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 573DE2952812CD75009917F9 /* extension.swift */; };
+		573DE29E2812EB6C009917F9 /* zjooc.swift in Sources */ = {isa = PBXBuildFile; fileRef = 573DE29D2812EB6C009917F9 /* zjooc.swift */; };
+		573DE2A1281392AB009917F9 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 573DE2A0281392AB009917F9 /* Alamofire */; };
+		574EF3DD2813D275002EB1F3 /* R.swift in Sources */ = {isa = PBXBuildFile; fileRef = 574EF3DC2813D275002EB1F3 /* R.swift */; };
 		5792189E2810DCAD001787B3 /* MenuBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5792189D2810DCAD001787B3 /* MenuBarView.swift */; };
 		579218A12810E70E001787B3 /* ZjoocVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 579218A02810E70E001787B3 /* ZjoocVM.swift */; };
 		579218A32810E9C9001787B3 /* MenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 579218A22810E9C9001787B3 /* MenuView.swift */; };
@@ -16,10 +22,89 @@
 		57C63AEE2810490F00F7B113 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 57C63AED2810490F00F7B113 /* Assets.xcassets */; };
 		57C63AF12810490F00F7B113 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 57C63AF02810490F00F7B113 /* Preview Assets.xcassets */; };
 		57C63AF92810494300F7B113 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57C63AF82810494200F7B113 /* AppDelegate.swift */; };
+		57CCA5922813FB6A00E30EC8 /* SwiftDate.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 57CCA5842813FB4F00E30EC8 /* SwiftDate.framework */; };
+		57CCA5932813FB6A00E30EC8 /* SwiftDate.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 57CCA5842813FB4F00E30EC8 /* SwiftDate.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		57CCA5812813FB4F00E30EC8 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 57CCA5762813FB4E00E30EC8 /* SwiftDate.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 52D6D97C1BEFF229002C0205;
+			remoteInfo = "SwiftDate-iOS";
+		};
+		57CCA5832813FB4F00E30EC8 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 57CCA5762813FB4E00E30EC8 /* SwiftDate.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 52D6DA0F1BF000BD002C0205;
+			remoteInfo = "SwiftDate-macOS";
+		};
+		57CCA5852813FB4F00E30EC8 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 57CCA5762813FB4E00E30EC8 /* SwiftDate.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 52D6D9E21BEFFF6E002C0205;
+			remoteInfo = "SwiftDate-watchOS";
+		};
+		57CCA5872813FB4F00E30EC8 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 57CCA5762813FB4E00E30EC8 /* SwiftDate.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 52D6D9F01BEFFFBE002C0205;
+			remoteInfo = "SwiftDate-tvOS";
+		};
+		57CCA5892813FB4F00E30EC8 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 57CCA5762813FB4E00E30EC8 /* SwiftDate.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 52D6D9861BEFF229002C0205;
+			remoteInfo = "SwiftDate-iOS Tests";
+		};
+		57CCA58B2813FB4F00E30EC8 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 57CCA5762813FB4E00E30EC8 /* SwiftDate.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = DD75027A1C68FCFC006590AF;
+			remoteInfo = "SwiftDate-macOS Tests";
+		};
+		57CCA58D2813FB4F00E30EC8 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 57CCA5762813FB4E00E30EC8 /* SwiftDate.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = DD75028D1C690C7A006590AF;
+			remoteInfo = "SwiftDate-tvOS Tests";
+		};
+		57CCA58F2813FB4F00E30EC8 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 57CCA5762813FB4E00E30EC8 /* SwiftDate.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 6434DD8C20C809B2007626EF;
+			remoteInfo = TestApplication;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		57CCA5942813FB6A00E30EC8 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				57CCA5932813FB6A00E30EC8 /* SwiftDate.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		573DE28E28123160009917F9 /* WorkingItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkingItem.swift; sourceTree = "<group>"; };
+		573DE2902812CA25009917F9 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
+		573DE2952812CD75009917F9 /* extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = extension.swift; sourceTree = "<group>"; };
+		573DE29D2812EB6C009917F9 /* zjooc.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = zjooc.swift; sourceTree = "<group>"; };
+		574EF3DC2813D275002EB1F3 /* R.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = R.swift; sourceTree = "<group>"; };
 		5792189D2810DCAD001787B3 /* MenuBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuBarView.swift; sourceTree = "<group>"; };
 		5792189F2810E2D7001787B3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		579218A02810E70E001787B3 /* ZjoocVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZjoocVM.swift; sourceTree = "<group>"; };
@@ -31,6 +116,7 @@
 		57C63AF02810490F00F7B113 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		57C63AF22810490F00F7B113 /* ZjoocHelper.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = ZjoocHelper.entitlements; sourceTree = "<group>"; };
 		57C63AF82810494200F7B113 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		57CCA5762813FB4E00E30EC8 /* SwiftDate.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = SwiftDate.xcodeproj; path = "../../../Downloads/SwiftDate-6.3.1/SwiftDate.xcodeproj"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -38,6 +124,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				573DE2942812CBFC009917F9 /* LaunchAtLogin in Frameworks */,
+				57CCA5922813FB6A00E30EC8 /* SwiftDate.framework in Frameworks */,
+				573DE2A1281392AB009917F9 /* Alamofire in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -48,15 +137,26 @@
 			isa = PBXGroup;
 			children = (
 				573DE28E28123160009917F9 /* WorkingItem.swift */,
+				574EF3DC2813D275002EB1F3 /* R.swift */,
 			);
 			path = models;
+			sourceTree = "<group>";
+		};
+		573DE29C2812EB3E009917F9 /* api */ = {
+			isa = PBXGroup;
+			children = (
+				573DE29D2812EB6C009917F9 /* zjooc.swift */,
+			);
+			path = api;
 			sourceTree = "<group>";
 		};
 		57C63ADD2810490D00F7B113 = {
 			isa = PBXGroup;
 			children = (
+				57CCA5762813FB4E00E30EC8 /* SwiftDate.xcodeproj */,
 				57C63AE82810490D00F7B113 /* ZjoocHelper */,
 				57C63AE72810490D00F7B113 /* Products */,
+				57CCA5912813FB5D00E30EC8 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -71,6 +171,7 @@
 		57C63AE82810490D00F7B113 /* ZjoocHelper */ = {
 			isa = PBXGroup;
 			children = (
+				573DE29C2812EB3E009917F9 /* api */,
 				573DE28D2812312B009917F9 /* models */,
 				5792189F2810E2D7001787B3 /* Info.plist */,
 				5792189D2810DCAD001787B3 /* MenuBarView.swift */,
@@ -82,6 +183,8 @@
 				57C63AF82810494200F7B113 /* AppDelegate.swift */,
 				579218A02810E70E001787B3 /* ZjoocVM.swift */,
 				579218A22810E9C9001787B3 /* MenuView.swift */,
+				573DE2902812CA25009917F9 /* SettingsView.swift */,
+				573DE2952812CD75009917F9 /* extension.swift */,
 			);
 			path = ZjoocHelper;
 			sourceTree = "<group>";
@@ -94,6 +197,28 @@
 			path = "Preview Content";
 			sourceTree = "<group>";
 		};
+		57CCA5772813FB4E00E30EC8 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				57CCA5822813FB4F00E30EC8 /* SwiftDate.framework */,
+				57CCA5842813FB4F00E30EC8 /* SwiftDate.framework */,
+				57CCA5862813FB4F00E30EC8 /* SwiftDate.framework */,
+				57CCA5882813FB4F00E30EC8 /* SwiftDate.framework */,
+				57CCA58A2813FB4F00E30EC8 /* SwiftDate-iOS Tests.xctest */,
+				57CCA58C2813FB4F00E30EC8 /* SwiftDate-macOS Tests.xctest */,
+				57CCA58E2813FB4F00E30EC8 /* SwiftDate-tvOS Tests.xctest */,
+				57CCA5902813FB4F00E30EC8 /* TestApplication.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		57CCA5912813FB5D00E30EC8 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -104,12 +229,17 @@
 				57C63AE22810490D00F7B113 /* Sources */,
 				57C63AE32810490D00F7B113 /* Frameworks */,
 				57C63AE42810490D00F7B113 /* Resources */,
+				57CCA5942813FB6A00E30EC8 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
 			name = ZjoocHelper;
+			packageProductDependencies = (
+				573DE2932812CBFC009917F9 /* LaunchAtLogin */,
+				573DE2A0281392AB009917F9 /* Alamofire */,
+			);
 			productName = ZjoocHelper;
 			productReference = 57C63AE62810490D00F7B113 /* ZjoocHelper.app */;
 			productType = "com.apple.product-type.application";
@@ -138,14 +268,83 @@
 				Base,
 			);
 			mainGroup = 57C63ADD2810490D00F7B113;
+			packageReferences = (
+				573DE2922812CBFC009917F9 /* XCRemoteSwiftPackageReference "LaunchAtLogin" */,
+				573DE29F281392AB009917F9 /* XCRemoteSwiftPackageReference "Alamofire" */,
+			);
 			productRefGroup = 57C63AE72810490D00F7B113 /* Products */;
 			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = 57CCA5772813FB4E00E30EC8 /* Products */;
+					ProjectRef = 57CCA5762813FB4E00E30EC8 /* SwiftDate.xcodeproj */;
+				},
+			);
 			projectRoot = "";
 			targets = (
 				57C63AE52810490D00F7B113 /* ZjoocHelper */,
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		57CCA5822813FB4F00E30EC8 /* SwiftDate.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = SwiftDate.framework;
+			remoteRef = 57CCA5812813FB4F00E30EC8 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		57CCA5842813FB4F00E30EC8 /* SwiftDate.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = SwiftDate.framework;
+			remoteRef = 57CCA5832813FB4F00E30EC8 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		57CCA5862813FB4F00E30EC8 /* SwiftDate.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = SwiftDate.framework;
+			remoteRef = 57CCA5852813FB4F00E30EC8 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		57CCA5882813FB4F00E30EC8 /* SwiftDate.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = SwiftDate.framework;
+			remoteRef = 57CCA5872813FB4F00E30EC8 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		57CCA58A2813FB4F00E30EC8 /* SwiftDate-iOS Tests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = "SwiftDate-iOS Tests.xctest";
+			remoteRef = 57CCA5892813FB4F00E30EC8 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		57CCA58C2813FB4F00E30EC8 /* SwiftDate-macOS Tests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = "SwiftDate-macOS Tests.xctest";
+			remoteRef = 57CCA58B2813FB4F00E30EC8 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		57CCA58E2813FB4F00E30EC8 /* SwiftDate-tvOS Tests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = "SwiftDate-tvOS Tests.xctest";
+			remoteRef = 57CCA58D2813FB4F00E30EC8 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		57CCA5902813FB4F00E30EC8 /* TestApplication.app */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.application;
+			path = TestApplication.app;
+			remoteRef = 57CCA58F2813FB4F00E30EC8 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
 		57C63AE42810490D00F7B113 /* Resources */ = {
@@ -165,12 +364,16 @@
 			buildActionMask = 2147483647;
 			files = (
 				57C63AF92810494300F7B113 /* AppDelegate.swift in Sources */,
+				573DE2912812CA25009917F9 /* SettingsView.swift in Sources */,
 				579218A32810E9C9001787B3 /* MenuView.swift in Sources */,
+				573DE2962812CD75009917F9 /* extension.swift in Sources */,
 				5792189E2810DCAD001787B3 /* MenuBarView.swift in Sources */,
 				57C63AEC2810490D00F7B113 /* ContentView.swift in Sources */,
 				573DE28F28123160009917F9 /* WorkingItem.swift in Sources */,
 				57C63AEA2810490D00F7B113 /* ZjoocHelperApp.swift in Sources */,
 				579218A12810E70E001787B3 /* ZjoocVM.swift in Sources */,
+				573DE29E2812EB6C009917F9 /* zjooc.swift in Sources */,
+				574EF3DD2813D275002EB1F3 /* R.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -372,6 +575,38 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		573DE2922812CBFC009917F9 /* XCRemoteSwiftPackageReference "LaunchAtLogin" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/sindresorhus/LaunchAtLogin";
+			requirement = {
+				branch = main;
+				kind = branch;
+			};
+		};
+		573DE29F281392AB009917F9 /* XCRemoteSwiftPackageReference "Alamofire" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "git@github.com:Alamofire/Alamofire.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		573DE2932812CBFC009917F9 /* LaunchAtLogin */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 573DE2922812CBFC009917F9 /* XCRemoteSwiftPackageReference "LaunchAtLogin" */;
+			productName = LaunchAtLogin;
+		};
+		573DE2A0281392AB009917F9 /* Alamofire */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 573DE29F281392AB009917F9 /* XCRemoteSwiftPackageReference "Alamofire" */;
+			productName = Alamofire;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 57C63ADE2810490D00F7B113 /* Project object */;
 }

@@ -52,18 +52,25 @@ final class AppDelegate: NSObject, NSApplicationDelegate {
         let menuItem = NSMenuItem()
         
         ZjoocVM.shared.hostingView = NSHostingView(rootView: AnyView(MenuView()))
-        ZjoocVM.shared.hostingView?.frame = NSRect(x: 0, y: 0, width: 280, height: 425)
+        ZjoocVM.shared.hostingView?.frame = NSRect(x: 0, y: 0, width: 500, height: 600)
         
         menuItem.view = ZjoocVM.shared.hostingView
-       
+        
         
         menu.addItem(menuItem)
         menu.addItem(NSMenuItem.separator())
-//        menu.addItem(NSMenuItem(title: String(localized: "Preferences"), action: #selector(openSettingsView),
-//                                keyEquivalent: ","))
-//        menu.addItem(NSMenuItem(title: String(localized: "Quit"), action: #selector(NSApplication.terminate(_:)),
-//                                 keyEquivalent: "q"))
+        menu.addItem(NSMenuItem(title: String(localized: "Preferences"), action: #selector(openSettingsView),
+                                keyEquivalent: ","))
+        //        menu.addItem(NSMenuItem(title: String(localized: "Quit"), action: #selector(NSApplication.terminate(_:)),
+        //                                 keyEquivalent: "q"))
         statusItem.menu = menu
+    }
+    
+    @objc private func openSettingsView() {
+        NSApp.sendAction(Selector(("showPreferencesWindow:")), to: nil, from: nil)
+        NSApp.setActivationPolicy(.regular)
+        NSApp.activate(ignoringOtherApps: true)
+        NSApp.windows.first?.makeKeyAndOrderFront(self)
     }
     
 }

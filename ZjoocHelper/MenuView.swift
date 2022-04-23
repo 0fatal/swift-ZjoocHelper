@@ -13,22 +13,51 @@ struct MenuView: View {
     // 未完成的测试举例
     // [课程名]测试名称 - 截止时间
     
+    @State var homework: [WorkingItem] = []
+    @State var test: [WorkingItem] = []
+    @State var exam: [WorkingItem] = []
+    
+    init() {}
+    
     var body: some View {
-        VStack(spacing: 8) {
-            PanelView(unhandleCount: 12, totalCount: 100, items: [WorkingItem(courseName: "操作系统", endTime: Date.now, workingName: "进程调度作业"),WorkingItem(courseName: "操作系统", endTime: Date.now, workingName: "进程调度作业"),WorkingItem(courseName: "操作系统", endTime: Date.now, workingName: "进程调度作业"),WorkingItem(courseName: "操作系统", endTime: Date.now, workingName: "进程调度作业"),WorkingItem(courseName: "操作系统", endTime: Date.now, workingName: "进程调度作业")])
+        ScrollView{
+            VStack(spacing: 8) {
+                Form {
+                    PanelView(items: homework,headline: "作业" )
+                    
+                }
+                Form {
+                    PanelView(items: test, headline: "测试")
+                    
+                }
+                Form {
+                    PanelView(items: exam,headline: "考试")
+                }
+            }.onAppear {
+                Task {
+                    getHomework().
+                    homework = (await getHomework()) ?? []
+                    test = (await getTest()) ?? []
+                    exam = (await getExam()) ?? []
+                }
+            }
         }
     }
 }
 
 struct PanelView: View {
-    let unhandleCount: Int
-    let totalCount: Int
+
     let items: [WorkingItem]
+    let headline: String
     var body: some View {
-        VStack {
+        VStack(alignment: .leading) {
+            Text("\(headline) \(items.count)").font(Font.system(size: 26, weight: .bold)).padding(.all, 10).frame(maxWidth: .infinity,alignment: .leading)
+      
             ForEach(items,id: \.self) {item in
                 WorkingItemView(item: item)
+                Divider()
             }
+            
         }
     }
 }
@@ -47,9 +76,11 @@ struct WorkingItemView: View{
     
     
     var body: some View {
-        HStack {
-            Text("[\(item.courseName)]\(item.workingName)")
+        HStack() {
+            Text("\(item.paperName)").frame(width:200,height: 30,alignment: .leading).truncationMode(.tail).foregroundColor(.blue)
+            Spacer()
+            Text("[\(item.courseName)]")
             Text("\(endTime)")
-        }
+        }.padding(EdgeInsets(top: 0, leading: 10, bottom: 0, trailing: 10))
     }
 }

@@ -15,5 +15,9 @@ struct ZjoocHelperApp: App {
         WindowGroup {
             if false {}
         }
+        
+        Settings {
+            SettingsView()
+        }
     }
 }
