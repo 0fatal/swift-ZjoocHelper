@@ -33,25 +33,27 @@ func doLogin() async-> Bool{
 
 }
 
-func getHomework() async -> [WorkingItem]? {
-    return await getWorkingItem(path: "/course/homework")
+func getHomework() async throws-> [WorkingItem]? {
+    return try await getWorkingItem(path: "/course/homework")
 }
 
-func getTest() async -> [WorkingItem]? {
-    return await getWorkingItem(path: "/course/test")
+func getTest() async throws-> [WorkingItem]? {
+    return try await getWorkingItem(path: "/course/test")
 }
 
-func getExam() async -> [WorkingItem]? {
-    return await getWorkingItem(path: "/course/exam")
+func getExam() async throws-> [WorkingItem]? {
+    return try await getWorkingItem(path: "/course/exam")
 }
 
-func getWorkingItem(path:String) async -> [WorkingItem]? {
+func getWorkingItem(path:String) async throws  -> [WorkingItem]? {
     let url = "\(baseUrl)\(path)"
     print(url)
     let resp = try! await AF.request(url,method: .get).serializingDecodable(R<[WorkingItem]>.self).value
     print(resp)
-    
-    
+    if(resp.code == -1 && resp.msg == "login required") {
+        throw "login required"
+    }
+
     return resp.data
 }
 

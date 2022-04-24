@@ -24,6 +24,7 @@
 		57C63AF92810494300F7B113 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57C63AF82810494200F7B113 /* AppDelegate.swift */; };
 		57CCA5922813FB6A00E30EC8 /* SwiftDate.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 57CCA5842813FB4F00E30EC8 /* SwiftDate.framework */; };
 		57CCA5932813FB6A00E30EC8 /* SwiftDate.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 57CCA5842813FB4F00E30EC8 /* SwiftDate.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		57CCA5972814C9E600E30EC8 /* SwiftfulLoadingIndicators in Frameworks */ = {isa = PBXBuildFile; productRef = 57CCA5962814C9E600E30EC8 /* SwiftfulLoadingIndicators */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -127,6 +128,7 @@
 				573DE2942812CBFC009917F9 /* LaunchAtLogin in Frameworks */,
 				57CCA5922813FB6A00E30EC8 /* SwiftDate.framework in Frameworks */,
 				573DE2A1281392AB009917F9 /* Alamofire in Frameworks */,
+				57CCA5972814C9E600E30EC8 /* SwiftfulLoadingIndicators in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -239,6 +241,7 @@
 			packageProductDependencies = (
 				573DE2932812CBFC009917F9 /* LaunchAtLogin */,
 				573DE2A0281392AB009917F9 /* Alamofire */,
+				57CCA5962814C9E600E30EC8 /* SwiftfulLoadingIndicators */,
 			);
 			productName = ZjoocHelper;
 			productReference = 57C63AE62810490D00F7B113 /* ZjoocHelper.app */;
@@ -271,6 +274,7 @@
 			packageReferences = (
 				573DE2922812CBFC009917F9 /* XCRemoteSwiftPackageReference "LaunchAtLogin" */,
 				573DE29F281392AB009917F9 /* XCRemoteSwiftPackageReference "Alamofire" */,
+				57CCA5952814C9E600E30EC8 /* XCRemoteSwiftPackageReference "SwiftfulLoadingIndicators" */,
 			);
 			productRefGroup = 57C63AE72810490D00F7B113 /* Products */;
 			projectDirPath = "";
@@ -593,6 +597,14 @@
 				minimumVersion = 5.0.0;
 			};
 		};
+		57CCA5952814C9E600E30EC8 /* XCRemoteSwiftPackageReference "SwiftfulLoadingIndicators" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "git@github.com:SwiftfulThinking/SwiftfulLoadingIndicators.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.0.4;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -605,6 +617,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 573DE29F281392AB009917F9 /* XCRemoteSwiftPackageReference "Alamofire" */;
 			productName = Alamofire;
+		};
+		57CCA5962814C9E600E30EC8 /* SwiftfulLoadingIndicators */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 57CCA5952814C9E600E30EC8 /* XCRemoteSwiftPackageReference "SwiftfulLoadingIndicators" */;
+			productName = SwiftfulLoadingIndicators;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

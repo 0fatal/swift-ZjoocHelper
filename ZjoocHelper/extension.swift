@@ -31,3 +31,7 @@ public struct AnyDecodable : Decodable{
     // handle all the different types including bool, array, dictionary, double etc
   }
 }
+
+extension String: LocalizedError {
+    public var errorDescription: String? { return self }
+}

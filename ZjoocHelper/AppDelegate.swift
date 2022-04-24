@@ -30,7 +30,7 @@ final class AppDelegate: NSObject, NSApplicationDelegate {
     }()
     
     private func setupStatusItem() {
-        statusItem = NSStatusBar.system.statusItem(withLength: 100)
+        statusItem = NSStatusBar.system.statusItem(withLength: 70)
         let hostingView = NSHostingView(rootView: MenuBarView())
         
         // 自适应view大小
@@ -52,7 +52,7 @@ final class AppDelegate: NSObject, NSApplicationDelegate {
         let menuItem = NSMenuItem()
         
         ZjoocVM.shared.hostingView = NSHostingView(rootView: AnyView(MenuView()))
-        ZjoocVM.shared.hostingView?.frame = NSRect(x: 0, y: 0, width: 500, height: 600)
+        ZjoocVM.shared.hostingView?.frame = NSRect(x: 0, y: 0, width: 670, height: 600)
         
         menuItem.view = ZjoocVM.shared.hostingView
         

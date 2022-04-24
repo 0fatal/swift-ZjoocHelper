@@ -15,22 +15,18 @@ struct MenuBarView: View {
     
     var body: some View {
         HStack(spacing: 4) {
-            Image(systemName: "circle")
-            Text("zjooc").font(.system(.body, design: .monospaced).bold())
+            Image("favicon").resizable().aspectRatio(contentMode: .fit)
+
+            Text("ZJOOC").font(.system(.body, design: .monospaced).bold())
         }
         .onAppear {
             self.timer = Timer.publish(every: updateInterval, on: .main, in: .common).autoconnect()
             Task {
-                print(await doLogin())
-                let res = await getHomework()
-                print(res)
+                await doLogin()
             }
         }
         .onReceive(timer) {_ in
-            Task {
-                let res = await getHomework()
-                print(res)
-            }
+            
         }.onChange(of: updateInterval) {interval in
             self.timer = Timer.publish(every: interval, on: .main, in: .common).autoconnect()
         }
