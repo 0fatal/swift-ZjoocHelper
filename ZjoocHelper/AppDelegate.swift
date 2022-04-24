@@ -61,8 +61,8 @@ final class AppDelegate: NSObject, NSApplicationDelegate {
         menu.addItem(NSMenuItem.separator())
         menu.addItem(NSMenuItem(title: String(localized: "Preferences"), action: #selector(openSettingsView),
                                 keyEquivalent: ","))
-        //        menu.addItem(NSMenuItem(title: String(localized: "Quit"), action: #selector(NSApplication.terminate(_:)),
-        //                                 keyEquivalent: "q"))
+                menu.addItem(NSMenuItem(title: String(localized: "Quit"), action: #selector(NSApplication.terminate(_:)),
+                                         keyEquivalent: "q"))
         statusItem.menu = menu
     }
     
