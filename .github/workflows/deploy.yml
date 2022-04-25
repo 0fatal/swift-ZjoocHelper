@@ -13,8 +13,8 @@ jobs:
     steps:
       - name: Checkout project
         uses: actions/checkout@v2
-      - name: select Xcode 13.2.1
-        run: sudo xcode-select -switch /Applications/Xcode_13.2.1.app
+      - name: select Xcode 13.3.1
+        run: sudo xcode-select -switch /Applications/Xcode_13.3.1.app
 
       - name: Find first scheme of default project
         run: |
