@@ -8,21 +8,17 @@
 </div>
 
 ## 🧐 What is it
+
 ZjoocHelper is a component in your menu bar, which is developed for helping you not miss your homework. Have a good time! ❤️
-
-
 
 ## 📷 Screenshot
 
 ![Screenshot](Assets/example.png)
 
-
 ## 🍻 Download
 
 [![GitHub Release](https://img.shields.io/github/v/release/ZacharyWin/swift-ZjoocHelper?labelColor=282c34&logo=GitHub&style=for-the-badge)](https://github.com/ZacharyWin/swift-ZjoocHelper/releases/latest)
 
-
 ## ©️ License
 
 [MIT](LICENSE)
-
