@@ -1,4 +1,4 @@
-name: master_deploy
+name: deploy
 
 on:
   push:
@@ -29,10 +29,10 @@ jobs:
           set-env-from-proj PRODUCT_MODULE_NAME
           set-env-from-proj PRODUCT_NAME
           set-env-from-proj PROJECT_NAME
-      - name: Build and test app
-        shell: bash --noprofile --norc -eo pipefail {0}
-        run: |
-          xcodebuild -scheme "$SCHEME" test CODE_SIGN_IDENTITY=- | xcpretty
+#       - name: Build and test app
+#         shell: bash --noprofile --norc -eo pipefail {0}
+#         run: |
+#           xcodebuild -scheme "$SCHEME" test CODE_SIGN_IDENTITY=- | xcpretty
       - name: Build and install app
         shell: bash --noprofile --norc -eo pipefail {0}
         run: |
