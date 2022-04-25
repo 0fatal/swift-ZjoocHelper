@@ -10,9 +10,9 @@ import SwiftUI
 
 struct MenuBarView: View {
 //    private var updateInterval: Double = 60 * 60
-    
+
 //    @State var timer = Timer.publish(every: 60, tolerance: 10, on: .main, in: .common).autoconnect()
-    
+
     var body: some View {
         HStack(spacing: 4) {
             Image("favicon").resizable().aspectRatio(contentMode: .fit)
@@ -31,5 +31,4 @@ struct MenuBarView: View {
 //            self.timer = Timer.publish(every: interval, on: .main, in: .common).autoconnect()
 //        }
     }
-    
 }

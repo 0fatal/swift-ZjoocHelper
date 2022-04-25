@@ -10,12 +10,12 @@ import SwiftUI
 @main
 struct ZjoocHelperApp: App {
     @NSApplicationDelegateAdaptor(AppDelegate.self) private var appDelegate
-    
+
     var body: some Scene {
         WindowGroup {
             if false {}
         }
-        
+
         Settings {
             SettingsView()
         }

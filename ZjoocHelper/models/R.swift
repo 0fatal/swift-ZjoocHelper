@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct R<T:Decodable>: Decodable {
+struct R<T: Decodable>: Decodable {
     let code: Int
     let msg: String
     let data: T?

@@ -6,11 +6,9 @@
 //
 
 import Foundation
-import SwiftDate
 
-
-struct WorkingItem: Hashable,Codable {
-    var courseName:String
+struct WorkingItem: Hashable, Codable {
+    var courseName: String
     var endTime: Date
     var paperName: String
     var courseId: String?
@@ -18,14 +16,14 @@ struct WorkingItem: Hashable,Codable {
     var scorePropor: String?
     var paperId: String?
     var testCount: Int?
-    
-    init(courseName:String, paperName: String, endTime:Date)  {
+
+    init(courseName: String, paperName: String, endTime: Date) {
         self.courseName = courseName
         self.paperName = paperName
         self.endTime = endTime
     }
-    
-    enum CodingKeys:String, CodingKey {
+
+    enum CodingKeys: String, CodingKey {
         case courseName
         case endTime
         case paperName
@@ -35,27 +33,22 @@ struct WorkingItem: Hashable,Codable {
         case paperId
         case testCount
     }
-    
-    init(from decoder: Decoder)  {
 
-            let container = try! decoder.container(keyedBy: CodingKeys.self)
-            
+    init(from decoder: Decoder) {
+        let container = try! decoder.container(keyedBy: CodingKeys.self)
+
         courseName = try! container.decode(String.self, forKey: .courseName)
         let _endTime = try! container.decode(String.self, forKey: .endTime)
-       
+        let formatter = DateFormatter()
+        formatter.dateFormat = "yyyy-MM-dd'T'HH:mm:ss.SSSZZZ"
 
-        
-        let date = _endTime.toDate()
-        
-        endTime = date!.date
+        endTime = formatter.date(from: _endTime)!
+
         paperName = try! container.decode(String.self, forKey: .paperName)
         courseId = try? container.decode(String.self, forKey: .courseId)
-        allowCount = try? container.decode(Int.self,forKey: .allowCount)
-        scorePropor = try? container.decode(String.self,forKey: .scorePropor)
+        allowCount = try? container.decode(Int.self, forKey: .allowCount)
+        scorePropor = try? container.decode(String.self, forKey: .scorePropor)
         paperId = try? container.decode(String.self, forKey: .paperId)
-        testCount = try? container.decode(Int.self,forKey: .testCount)
-
-
-        }
-
+        testCount = try? container.decode(Int.self, forKey: .testCount)
+    }
 }

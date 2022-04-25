@@ -8,10 +8,8 @@
 import Foundation
 import SwiftUI
 
-
-class ZjoocVM:ObservableObject {
+class ZjoocVM: ObservableObject {
     static let shared = ZjoocVM()
-    
-    @Published var hostingView: NSHostingView<AnyView>?
 
+    @Published var hostingView: NSHostingView<AnyView>?
 }
