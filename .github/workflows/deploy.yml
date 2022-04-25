@@ -60,7 +60,7 @@ jobs:
 
       - name: Update cask in Homebrew tap
         run: |
-          CASK_NAME=$PROJECT_NAME
+          CASK_NAME=${PROJECT_NAME,,}
           CASK_VERSION=$(echo "$GITHUB_REF" | cut -c12-)
           CASK_SHA256=$(shasum --algorithm 256 "build/$PRODUCT_MODULE_NAME.dmg" | awk '{print $1}')
           cd homebrew-tap
