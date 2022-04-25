@@ -1,25 +1,29 @@
-name: master_deploy
+name: deploy
 
 on:
   push:
-    tags: [ v* ]
+#     tags: [ v* ]
+    branches: [ main ]
 
 jobs:
   deploy:
     runs-on: macos-latest
+    
 
     steps:
       - name: Checkout project
         uses: actions/checkout@v2
+      - name: select Xcode 13.3.1
+        run: sudo xcode-select -switch /Applications/Xcode_13.3.1.app
 
       - name: Find first scheme of default project
         run: |
-          echo "::set-env name=SCHEME::$(xcodebuild -list -json | jq -r '.project.schemes[0]')"
+          echo "SCHEME=$(xcodebuild -list -json | jq -r '.project.schemes[0]')" >> $GITHUB_ENV
           
       - name: Set environment variables from project settings
         run: |
           function set-env-from-proj { 
-            echo "::set-env name=$1::$(xcodebuild -scheme "$SCHEME" -showBuildSettings | grep " $1 " | sed "s/[ ]*$1 = //")"
+            echo "$1=$(xcodebuild -scheme "$SCHEME" -showBuildSettings | grep " $1 " | sed "s/[ ]*$1 = //")" >> $GITHUB_ENV
           }
           set-env-from-proj FULL_PRODUCT_NAME
           set-env-from-proj INSTALL_PATH
@@ -27,14 +31,14 @@ jobs:
           set-env-from-proj PRODUCT_MODULE_NAME
           set-env-from-proj PRODUCT_NAME
           set-env-from-proj PROJECT_NAME
-      - name: Build and test app
-        shell: bash --noprofile --norc -eo pipefail {0}
-        run: |
-          xcodebuild -scheme "$SCHEME" test CODE_SIGN_IDENTITY=- | xcpretty
+#       - name: Build and test app
+#         shell: bash --noprofile --norc -eo pipefail {0}
+#         run: |
+#           xcodebuild -scheme "$SCHEME" test CODE_SIGN_IDENTITY=- | xcpretty
       - name: Build and install app
         shell: bash --noprofile --norc -eo pipefail {0}
         run: |
-          xcodebuild -scheme "$SCHEME" install DSTROOT=build/root | xcpretty
+          xcodebuild -scheme "$SCHEME" install DSTROOT=build/root CODE_SIGN_IDENTITY=- | xcpretty
       - name: Package app
         run: |
           hdiutil create \
