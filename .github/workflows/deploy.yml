@@ -34,7 +34,7 @@ jobs:
       - name: Build and install app
         shell: bash --noprofile --norc -eo pipefail {0}
         run: |
-          xcodebuild -scheme "$SCHEME" install DSTROOT=build/root | xcpretty
+          xcodebuild -scheme "$SCHEME" install DSTROOT=build/root CODE_SIGN_IDENTITY=- | xcpretty
       - name: Package app
         run: |
           hdiutil create \
