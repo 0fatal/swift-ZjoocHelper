@@ -17,7 +17,9 @@ ZjoocHelper is a component in your menu bar, which is developed for helping you 
 
 ## 🍻 Download
 
-[![GitHub Release](https://img.shields.io/github/v/release/ZacharyWin/swift-ZjoocHelper?labelColor=282c34&logo=GitHub&style=for-the-badge)](https://github.com/ZacharyWin/swift-ZjoocHelper/releases/latest)
+- Way1: [![GitHub Release](https://img.shields.io/github/v/release/ZacharyWin/swift-ZjoocHelper?labelColor=282c34&logo=GitHub&style=for-the-badge)](https://github.com/ZacharyWin/swift-ZjoocHelper/releases/latest)
+
+- Way2: `brew install zacharywin/tap/zjoochelper`
 
 ## ©️ License
 
