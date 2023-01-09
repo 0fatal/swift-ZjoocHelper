@@ -4,7 +4,7 @@
 
   <img src="https://img.shields.io/badge/uses-SwiftUI-f05138?labelColor=282c34&logo=swift" alt="Use Swift" />
   <img src="https://img.shields.io/badge/macOS-12.1+-f05138?labelColor=282c34&logo=apple" alt="macOS 12.0+" />
-  <a href="https://github.com/0xfatal/swift-ZjoocHelper/releases/latest"><img src="https://img.shields.io/github/v/release/0xfatal/swift-ZjoocHelper?labelColor=282c34&logo=GitHub&style=for-the-badge?labelColor=282c34&logo=GitHub" alt="GitHub Release" /></a>
+  <a href="https://github.com/0fatal/swift-ZjoocHelper/releases/latest"><img src="https://img.shields.io/github/v/release/0fatal/swift-ZjoocHelper?labelColor=282c34&logo=GitHub&style=for-the-badge?labelColor=282c34&logo=GitHub" alt="GitHub Release" /></a>
 </div>
 
 ## 🧐 What is it
@@ -17,9 +17,9 @@ ZjoocHelper is a component in your menu bar, which is developed for helping you 
 
 ## 🍻 Download
 
-- Way1: [![GitHub Release](https://img.shields.io/github/v/release/0xfatal/swift-ZjoocHelper?labelColor=282c34&logo=GitHub&style=for-the-badge)](https://github.com/0xfatal/swift-ZjoocHelper/releases/latest)
+- Way1: [![GitHub Release](https://img.shields.io/github/v/release/0fatal/swift-ZjoocHelper?labelColor=282c34&logo=GitHub&style=for-the-badge)](https://github.com/0fatal/swift-ZjoocHelper/releases/latest)
 
-- Way2: `brew install 0xfatal/tap/zjoochelper`
+- Way2: `brew install 0fatal/tap/zjoochelper`
 
 ## ©️ License
 
